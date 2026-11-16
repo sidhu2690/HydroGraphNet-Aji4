@@ -136,15 +136,13 @@ y[:, 0]      normalized next water-depth increment
 y[:, 1]      normalized next cell-volume increment
 ```
 
-The model is autoregressive only in water depth and volume. Future release and reservoir-inflow forcings are read from the dataset.
+The model is autoregressive only in water depth and volume.
 
 ## 6. Resource tuning
 
-The default is deliberately conservative for a 15,990-node/63,960-edge graph.
 
 - More VRAM: increase `batch_size`, reduce `grad_accum_steps`, and optionally set `checkpoint_segments: 0`.
 - Less VRAM: keep batch 1, increase `grad_accum_steps`, and retain `checkpoint_segments: 1`.
 - `num_workers: 0` can help memory-constrained systems.
 - Keep `batch_size × grad_accum_steps` constant when comparing effective-batch experiments.
 
-This package contains no sampling configuration or subset-building tool; the supplied recipe is for complete Aji-4 folders.
