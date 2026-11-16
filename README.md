@@ -1,17 +1,5 @@
 # HydroGraphNet — Aji-4, full-data 15-feature edition
 
-A minimal-change adaptation of [`sidhu2690/HydroGraphNet`](https://github.com/sidhu2690/HydroGraphNet) for the Aji-4 dam HEC-RAS datasets.
-
-- Same MLP-MeshGraphNet architecture, graph backend, loss, and metrics as the main repository.
-- **15 node inputs:** 9 static + 2 forcings + 4 history values.
-- **No elapsed-hour feature.**
-- **No precipitation or infiltration input.** Both are zero/unused in Aji-4.
-- Uses both dam release (`US_InF`) and reservoir inflow (`reservoir_inflow_hourly.csv`).
-- Full-data recipe: all `train.txt + val.txt` floods, no subset and no per-epoch step cap.
-- Works with G1O, G12O, or G123O by changing `--data_dir`.
-
-See [`changed.md`](changed.md) for the exact main-repository comparison and [`DATASET.md`](DATASET.md) for the data layout.
-
 ## 1. Install
 
 Python 3.10+ is recommended.
