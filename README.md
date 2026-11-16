@@ -32,7 +32,6 @@ Keep the extracted gate-case folder intact. For example:
 └── test.txt
 ```
 
-You do **not** need to rename the `M80` files. That prefix is retained for compatibility with the original loader.
 
 ## 3. Full training
 
