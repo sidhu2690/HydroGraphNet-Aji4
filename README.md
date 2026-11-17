@@ -1,4 +1,4 @@
-# HydroGraphNet — Aji-4, full-data 15-feature edition
+# HydroGraphNet - Aji-4
 
 ## 1. Install
 
